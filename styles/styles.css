@@ -1,5 +1,6 @@
 html {
   font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -29,7 +30,7 @@ h4 {
 h5 {
   font-size: .9em;
   font-weight: 300;
-  border: 1px solid rgba(122,7,39,.7);
+  border: 1px solid #DB5461;
   padding: 2px 5px;
   margin-right: 10px;
   margin-bottom: 15px;
@@ -51,6 +52,40 @@ a, a:visited {
 #malt-link:hover {
   color: #ff5c57;
 }
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  background-color: #00071C;
+  color: #fff;
+  z-index: 100;
+  height: 50px;
+}
+nav a:hover, .active {
+  color: #DB5461 !important;
+}
+nav > a, nav > ul {
+  padding: 1rem 0;
+}
+nav > ul {
+  display: flex;
+  text-transform: uppercase;
+}
+nav > ul > li {
+  margin-left: 40px;
+}
+.logo {
+  font-weight: 700;
+  font-size: 22px;
+  transition: all 0.1s ease;
+}
+.logo:hover {
+  transform: scale(1.05);
+}
+
+
 
 #skills > ul {
   display: flex;
@@ -83,7 +118,7 @@ article {
   max-width: 390px;
 }
 .card p {
-  color: #666;
+  color: #AAABBC;
   line-height: 1.6;
   margin-bottom: 30px;
   text-align: center;
@@ -93,7 +128,7 @@ article {
   vertical-align: middle !important;
   margin-left: 10px;
   color: #fff;
-  background-color: #5b43d6;
+  background-color: #046E8F;
   display: inline-block;
   padding: .25em .4em;
   font-size: 75%;
@@ -111,8 +146,8 @@ article {
 .card-btn {
   border: 1px solid transparent;
   border-radius: 30px;
-  border-color: #5b43d6;
-  color: #5b43d6;
+  border-color: #046E8F;
+  color: #046E8F;
   padding: 12px 30px;
   display: inline-block;
   font-weight: 400;
@@ -129,11 +164,11 @@ article {
     box-shadow .15s ease-in-out;
 }
 .card-btn:visited {
-  color: #5b43d6;
+  color: #046E8F;
 }
 .card-btn:hover {
   color: white;
-  background-color: #5b43d6;
+  background-color: #046E8F;
 }
 .card img {
   max-width: 500px;
@@ -152,6 +187,9 @@ aside {
   margin-bottom: 30px;
   font-size: 25px;
 }
+.contact-list a:hover {
+  color: #DB5461;
+}
 .contact-list li {
   margin-left: 10px;
 }
@@ -159,7 +197,7 @@ aside {
   margin-bottom: 5px;
 }
 .lang-lv {
-  color: #666;
+  color: #AAABBC;
 }
 
 .to-top {
@@ -175,7 +213,8 @@ aside {
   width: 48px;
   height: 48px;
   border: 1px solid transparent;
-  border-color: #5b43d6;
+  border-color: #80FFE8;
+  color: #046E8F !important;
   border-radius: 24px;
   text-align: center;
   vertical-align: middle;
@@ -183,14 +222,18 @@ aside {
   line-height: 1.5;
 }
 .to-top-btn:hover {
-  background-color: #5b43d6;
+  background-color: #80FFE8;
+  color: #DB5461 !important;
 }
 
 footer {
   background-color: #00071c;
-  color: #71798f;
+  color: #AAABBC;
   text-align: center;
   padding: 1.25rem;
+}
+footer a:hover {
+  color: #046E8F;
 }
 
 @media (min-width: 576px) and (max-width: 991px) {
@@ -219,6 +262,9 @@ footer {
   .content {
     margin-left: 5em;
   }
+  footer {
+    text-align: left;
+  }
 }
 
 @media (min-width: 1920px) {
@@ -243,5 +289,8 @@ footer {
   }
   .card {
     flex-direction: row;
+  }
+  footer {
+    text-align: left;
   }
 }
