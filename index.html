@@ -6,110 +6,171 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sebastien Kempf · Full-stack developer</title>
   <meta name="description" content="Sebastien Kempf is a Full-stack developer that I highly recommend!">
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles/reset.css" />
+  <link rel="stylesheet" href="styles/styles.css" />
+  <script src="scripts/script.js"></script>
   <script src="https://kit.fontawesome.com/c2dd58e8c3.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <header id="top">
-    <h1>Sebastien Kempf</h1>
-    <h2>Full-stack developer</h2>
-    <h2>Previously @ Liip SA, Lausanne (Switzerland)</h2>
-    <span>↓ scroll</span>
+      <div class="intro">
+        <h1>Sebastien Kempf</h1>
+        <h2>Full-stack developer from France</h2>
+        <h2>Previously @ 
+          <a href="https://www.liip.ch/" id="liip-link" target="_blank" rel="noopener" title="Liip">Liip</a>
+          and
+          <a href="https://www.malt.fr/profile/sebastienkempf" id="malt-link" target="_blank" rel="noopener" title="Malt">freelance</a>
+        </h2>
+      </div>
+      <span class="arrow">↓ scroll</span>
   </header>
+  <nav>
+    <a href="#top">SKempf</a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#work">Work</a></li>
+    </ul>
+  </nav>
   <main>
-    <nav>
-      <a href="#top">SKempf</a>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#work">Work</a></li>
-      </ul>
-    </nav>
-    <section>
-      <h2>Contact me</h2>
-      <a href="mailto:sebkmpf@gmail.com" title="Send me an email">sebkmpf@gmail.com</a>
-      <ul>
-        <li>
-          <a href="https://github.com/sebkpf" target="_blank" rel="noopener" title="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com/in/sebastienkempf/" target="_blank" rel="noopener" title="LinkedIn">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.malt.fr/profile/sebastienkempf" target="_blank" rel="noopener" title="Malt">
-            <img src="malt-logo.svg" alt="malt logo">
-          </a>
-        </li>
-      </ul>
-      <h2>Languages</h2>
-      <p>French (native), English (native), German (academic), Brazilian Portuguese (academic)</p>
-    </section>
-    <section id="about">
-      <p>
-        Hi, I'm Sebastien Kempf, a Full-stack developer.
-        <br>
-        After over 6 years of managing supply chain, procurement and logistics international projects, I decided to take on a new challenge: learn different technical skills and create web applications.
-        <br>
-        I advocate for Agility and am a certified Scrum Master (PSM I) and Scrum Developer (PSD I).
-      </p>
-      <a href="https://sebkpf-cv.netlify.app/" target="_blank" rel="noopener" title="My resume">view my resume</a>
-    </section>
-    <section id="skills">
-      <h2>Skills</h2>
-      <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>React</li>
-        <li>React Native</li>
-        <li>Vue.js</li>
-        <li>Git</li>
-        <li>Heroku</li>
-        <li>Netlify</li>
-        <li>Google Cloud Platform</li>
-        <li>mongoDB</li>
-        <li>Node.js</li>
-        <li>PHP</li>
-        <li>Debian</li>
-        <li>PHPUnit</li>
-        <li>Codeception</li>
-        <li>cypress</li>
-        <li>Scrum</li>
-        <li>MySQL</li>
-        <li>MariaDB</li>
-        <li>GitLab CI/CD</li>
-        <li>Solr</li>
-        <li>Express</li>
-        <li>Expo</li>
-        <li>Docker</li>
-        <li>Laravel</li>
-      </ul>
-    </section>
-    <section id="work">
-      <h2>Take a look at what I've been working on!</h2>
-      <ul>
-        <li><a href="https://play.google.com/store/apps/details?id=com.maximenantier.voisinssauveteurs" target="_blank" rel="noopener" title="Voisin Sauveteurs PlayStore"><i class="fab fa-app-store-ios"></i> Voisin Sauveteurs</a></li>
-        <li><a href="https://apps.apple.com/us/app/voisinsauveteurs/id1549720886" target="_blank" rel="noopener" title="Voisin Sauveteurs AppStore"><i class="fab fa-google-play"></i> Voisin Sauveteurs</a></li>
-        <li><a href="https://leboncoin-clone.netlify.app/" target="_blank" rel="noopener" title="Leboncoin clone">Leboncoin clone</a></li>
-        <li><a href="https://formnest-cert.netlify.app/" target="_blank" rel="noopener" title="Formnest">Formnest</a></li>
-        <li><a href="https://wiki-marvel.netlify.app/" target="_blank" rel="noopener" title="Marvel Wiki">Marvel Wiki</a></li>
-      </ul>
-    </section>
-    <button>
-      <a href="#top">To the top!</a>
-    </button>
+    <div class="content">
+      <section id="about">
+        <p>
+          Hi, I'm Sebastien Kempf, a Full-stack developer.
+          <br>
+          After over 6 years of managing supply chain, procurement and logistics international projects, I decided to take on a new challenge: learn different technical skills and create web applications.
+          <br>
+          I advocate for Agility and am a certified Scrum Master (PSM I) and Scrum Developer (PSD I).
+        </p>
+        <a href="https://sebkpf-cv.netlify.app/" target="_blank" rel="noopener" title="My resume">view my resume</a>
+      </section>
+      <section id="skills">
+        <h3>Technologies I use</h3>
+        <ul>
+          <li><article><h6>cypress</h6></article></li>
+          <li><article><h6>Debian</h6></article></li>
+          <li><article><h6>Docker</h6></article></li>
+          <li><article><h6>Expo</h6></article></li>
+          <li><article><h6>Express</h6></article></li>
+          <li><article><h6>Git</h6></article></li>
+          <li><article><h6>GitLab CI/CD</h6></article></li>
+          <li><article><h6>Google Cloud Platform</h6></article></li>
+          <li><article><h6>Heroku</h6></article></li>
+          <li><article><h6>JavaScript, HTML, CSS</h6></article></li>
+          <li><article><h6>Laravel</h6></article></li>
+          <li><article><h6>mongoDB</h6></article></li>
+          <li><article><h6>MySQL, MariaDB</h6></article></li>
+          <li><article><h6>Netlify</h6></article></li>
+          <li><article><h6>Node.js</h6></article></li>
+          <li><article><h6>PHP</h6></article></li>
+          <li><article><h6>PHPUnit, Codeception</h6></article></li>
+          <li><article><h6>React</h6></article></li>
+          <li><article><h6>React Native</h6></article></li>
+          <li><article><h6>Scrum</h6></article></li>
+          <li><article><h6>Solr</h6></article></li>
+          <li><article><h6>Vue.js</h6></article></li>
+        </ul>
+      </section>
+      <hr>
+      <section id="work">
+        <h3>Take a look at some of my projects!</h3>
+        <ul>
+          <li>
+            <article class="card">
+              <img src="images/" alt="">
+              <div class="card-desc">
+                <h4>Voisin Sauveteurs<span class="badge">2021</span></h4>
+                <p>
+                  This mobile app can help save your life by alerting your neighbours when you are in crisis at home.
+                  <br>
+                  Using geocode data, all neighbours who have the app installed receive a notification with your address and can come help you.
+                </p>
+                <div>
+                  <a class="card-btn" href="https://play.google.com/store/apps/details?id=com.maximenantier.voisinssauveteurs" target="_blank" rel="noopener" title="Voisin Sauveteurs PlayStore"><i class="fab fa-app-store-ios"></i> Download</a>
+                  <a class="card-btn" href="https://apps.apple.com/us/app/voisinsauveteurs/id1549720886" target="_blank" rel="noopener" title="Voisin Sauveteurs AppStore"><i class="fab fa-google-play"></i> Download</a>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="card">
+              <img src="images/leboncoin.png" alt="leboncoin">              
+              <div class="card-desc">
+                <h4>Leboncoin clone<span class="badge">2020</span></h4>
+                <p>
+                  Leboncoin is a french classifieds web app.
+                  <br>
+                  This clone has all the major features of the original site
+                </p>
+                <div>
+                  <a class="card-btn" href="https://leboncoin-clone.netlify.app/" target="_blank" rel="noopener" title="Leboncoin clone">Visit site</a>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="card">
+              <img src="images/formnest.png" alt="formnest">
+              <div class="card-desc">
+                <h4>Formnest<span class="badge">2020</span></h4>
+                <p>A simple form generator.</p>
+                <div>
+                  <a class="card-btn" href="https://formnest-cert.netlify.app/" target="_blank" rel="noopener" title="Formnest">Visit site</a>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="card">
+              <img src="images/marvel.png" alt="marvel">
+              <div class="card-desc">
+                <h4>Marvel wiki<span class="badge">2020</span></h4>
+                <p>Using Marvel's own API, this web app features searching for characters and comics issues and to favorite these items.</p>
+                <div>
+                  <a class="card-btn" href="https://wiki-marvel.netlify.app/" target="_blank" rel="noopener" title="Marvel Wiki">Visit site</a>
+                </div>
+              </div>
+            </article>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <aside>
+      <section id="contact">
+        <h3>Contact me</h3>
+        <a href="mailto:sebkmpf@gmail.com" title="Send me an email">sebkmpf@gmail.com</a>
+        <ul>
+          <li>
+            <a href="https://github.com/sebkpf" target="_blank" rel="noopener" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/sebastienkempf/" target="_blank" rel="noopener" title="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </li>
+        </ul>
+        <h2>Languages</h2>
+        <ul>
+          <li>French (native)</li>
+          <li>English (native)</li>
+          <li>German (academic)</li>
+          <li>Brazilian Portuguese (academic)</li>
+        </ul>
+      </section>
+    </aside>
   </main>
+  <div class="to-top">
+    <a href="#top" class="to-top-btn"><i class="fas fa-angle-double-up"></i></a>
+  </div>
   <footer>
     <p>
       Website designed and coded by myself.
     </p>
     <p>
       Copyright © 2021
-      <a href="#">Sebastien Kempf</a>
+      <a href="/">Sebastien Kempf</a>
     </p>
   </footer>
 </body>
