@@ -1,9 +1,11 @@
 html {
   font-family: Arial, Helvetica, sans-serif;
 }
-
+.wrapper {
+  padding: 0px 32px;
+  align-items: flex-start;
+}
 body {
-  padding: 0px 32px 5vh 32px;
   display: flex;
   min-height: 100vh;
   flex-direction: column;
@@ -56,10 +58,14 @@ h6 {
   flex-direction: column;
   align-items: center;
 }
+.card-desc p {
+  max-width: 390px;
+}
 h4 {
   font-size: 20px;
   font-weight: 700;
   line-height: 1.6;
+  text-align: center;
 }
 .card p {
   color: gray;
@@ -82,6 +88,10 @@ h4 {
   white-space: nowrap;
   vertical-align: baseline;
   border-radius: .25rem;
+}
+.card-cta {
+  display: flex;
+  justify-content: space-around;
 }
 .card-btn {
   border: 1px solid transparent;
@@ -121,7 +131,6 @@ h4 {
   bottom: 0;
   padding: 1.5rem;
   z-index: 99;
-  width: 100%;
   display: flex;
   justify-content: flex-end;
 }
@@ -140,22 +149,46 @@ h4 {
   background-color: #5b43d6;
 }
 
-
-
-
+h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+aside {
+  min-width: 200px;
+  margin-top: 30px;
+}
+#contact ul {
+  display: flex;
+  margin-bottom: 30px;
+  font-size: 25px;
+}
+#contact li {
+  margin-left: 10px;
+}
+#language li {
+  margin-bottom: 5px;
+}
+.lang-lv {
+  color: gray;
+}
+footer {
+  background-color: #00071c;
+  color: #71798f;
+  text-align: center;
+  padding: 1.25rem;
+}
 
 @media (min-width: 576px) and (max-width: 991px) {
-  body {
-    padding: 0px calc(16.667% + 16px) 5vh calc(16.667% + 16px);
-  }
   h4 {
     font-size: calc(20px + 8 * ((100vw - 576px)/(1200)));
   }
 }
 
 @media (min-width: 992px) and (max-width: 1919px){
-  body {
-    padding: 0px 12.5% 5vh 12.5%;
+  .wrapper {
+    padding: 0px 12.5%;
+
   }
   h4 {
     font-size: calc(20px + 8 * ((100vw - 576px)/(1200)));
@@ -163,6 +196,12 @@ h4 {
   main {
     display: flex;
     flex-direction: row-reverse;
+  }
+  aside {
+    position: sticky;
+    top: 50vh;
+    transform: translateY(-50%);
+    margin-top: 0;
   }
   .content {
     margin-left: 5em;
@@ -170,8 +209,8 @@ h4 {
 }
 
 @media (min-width: 1920px) {
-  body {
-    padding: 0px 12.5% 5vh 12.5%;
+  .wrapper {
+    padding: 0px 12.5%;
   }
   h4 {
     font-size: 28px;
@@ -179,6 +218,15 @@ h4 {
   main {
     display: flex;
     flex-direction: row-reverse;
+  }
+  aside {
+    position: sticky;
+    top: 50vh;
+    transform: translateY(-50%);
+    margin-top: 0;
+  }
+  .card {
+    flex-direction: row;
   }
   .content {
     margin-left: 5em;

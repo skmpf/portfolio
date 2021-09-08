@@ -32,7 +32,7 @@
       <li><a href="#work">Work</a></li>
     </ul>
   </nav>
-  <main>
+  <main class="wrapper">
     <div class="content">
       <section id="about">
         <p>
@@ -71,7 +71,6 @@
           <li><article><h6>Vue.js</h6></article></li>
         </ul>
       </section>
-      <hr>
       <section id="work">
         <h3>Take a look at some of my projects!</h3>
         <ul>
@@ -85,7 +84,7 @@
                   <br>
                   Using geocode data, all neighbours who have the app installed receive a notification with your address and can come help you.
                 </p>
-                <div>
+                <div class="card-cta">
                   <a class="card-btn" href="https://play.google.com/store/apps/details?id=com.maximenantier.voisinssauveteurs" target="_blank" rel="noopener" title="Voisin Sauveteurs PlayStore"><i class="fab fa-app-store-ios"></i> Download</a>
                   <a class="card-btn" href="https://apps.apple.com/us/app/voisinsauveteurs/id1549720886" target="_blank" rel="noopener" title="Voisin Sauveteurs AppStore"><i class="fab fa-google-play"></i> Download</a>
                 </div>
@@ -102,7 +101,7 @@
                   <br>
                   This clone has all the major features of the original site
                 </p>
-                <div>
+                <div class="card-cta">
                   <a class="card-btn" href="https://leboncoin-clone.netlify.app/" target="_blank" rel="noopener" title="Leboncoin clone">Visit site</a>
                 </div>
               </div>
@@ -114,7 +113,7 @@
               <div class="card-desc">
                 <h4>Formnest<span class="badge">2020</span></h4>
                 <p>A simple form generator.</p>
-                <div>
+                <div class="card-cta">
                   <a class="card-btn" href="https://formnest-cert.netlify.app/" target="_blank" rel="noopener" title="Formnest">Visit site</a>
                 </div>
               </div>
@@ -126,7 +125,7 @@
               <div class="card-desc">
                 <h4>Marvel wiki<span class="badge">2020</span></h4>
                 <p>Using Marvel's own API, this web app features searching for characters and comics issues and to favorite these items.</p>
-                <div>
+                <div class="card-cta">
                   <a class="card-btn" href="https://wiki-marvel.netlify.app/" target="_blank" rel="noopener" title="Marvel Wiki">Visit site</a>
                 </div>
               </div>
@@ -138,8 +137,10 @@
     <aside>
       <section id="contact">
         <h3>Contact me</h3>
-        <a href="mailto:sebkmpf@gmail.com" title="Send me an email">sebkmpf@gmail.com</a>
         <ul>
+          <li>
+            <a href="mailto:sebkmpf@gmail.com" title="Send me an email"><i class="far fa-envelope"></i></a>
+          </li>
           <li>
             <a href="https://github.com/sebkpf" target="_blank" rel="noopener" title="GitHub">
               <i class="fab fa-github"></i>
@@ -151,12 +152,14 @@
             </a>
           </li>
         </ul>
-        <h2>Languages</h2>
+      </section>
+      <section id="language">
+        <h3>Languages</h3>
         <ul>
-          <li>French (native)</li>
-          <li>English (native)</li>
-          <li>German (academic)</li>
-          <li>Brazilian Portuguese (academic)</li>
+          <li>French <span class="lang-lv">(native)</span></li>
+          <li>English <span class="lang-lv">(native)</span></li>
+          <li>German <span class="lang-lv">(academic)</span></li>
+          <li>Brazilian Portuguese <span class="lang-lv">(academic)</span></li>
         </ul>
       </section>
     </aside>
@@ -165,9 +168,6 @@
     <a href="#top" class="to-top-btn"><i class="fas fa-angle-double-up"></i></a>
   </div>
   <footer>
-    <p>
-      Website designed and coded by myself.
-    </p>
     <p>
       Copyright © 2021
       <a href="/">Sebastien Kempf</a>
