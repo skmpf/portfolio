@@ -1,15 +1,44 @@
 html {
   font-family: Arial, Helvetica, sans-serif;
 }
-.wrapper {
-  padding: 0px 32px;
-  align-items: flex-start;
-}
+
 body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
   justify-content: space-between;
+}
+
+h1 {
+
+}
+h2 {
+
+}
+h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+h4 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+}
+h5 {
+  font-size: .9em;
+  font-weight: 300;
+  border: 1px solid rgba(122,7,39,.7);
+  padding: 2px 5px;
+  margin-right: 10px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.wrapper {
+  padding: 0px 32px;
+  align-items: flex-start;
 }
 
 a, a:visited {
@@ -30,15 +59,7 @@ a, a:visited {
 article {
   display: flex;
 }
-h6 {
-  font-size: .9em;
-  font-weight: 300;
-  border: 1px solid rgba(122,7,39,.7);
-  padding: 2px 5px;
-  margin-right: 10px;
-  margin-bottom: 15px;
-  text-transform: uppercase;
-}
+
 
 #work > ul {
   display: flex;
@@ -61,14 +82,8 @@ h6 {
 .card-desc p {
   max-width: 390px;
 }
-h4 {
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 1.6;
-  text-align: center;
-}
 .card p {
-  color: gray;
+  color: #666;
   line-height: 1.6;
   margin-bottom: 30px;
   text-align: center;
@@ -125,6 +140,28 @@ h4 {
 }
 
 
+
+
+
+aside {
+  min-width: 200px;
+  margin-top: 30px;
+}
+.contact-list {
+  display: flex;
+  margin-bottom: 30px;
+  font-size: 25px;
+}
+.contact-list li {
+  margin-left: 10px;
+}
+.language-list > li {
+  margin-bottom: 5px;
+}
+.lang-lv {
+  color: #666;
+}
+
 .to-top {
   position: sticky;
   right: 0;
@@ -149,29 +186,6 @@ h4 {
   background-color: #5b43d6;
 }
 
-h3 {
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-aside {
-  min-width: 200px;
-  margin-top: 30px;
-}
-#contact ul {
-  display: flex;
-  margin-bottom: 30px;
-  font-size: 25px;
-}
-#contact li {
-  margin-left: 10px;
-}
-#language li {
-  margin-bottom: 5px;
-}
-.lang-lv {
-  color: gray;
-}
 footer {
   background-color: #00071c;
   color: #71798f;
@@ -186,12 +200,11 @@ footer {
 }
 
 @media (min-width: 992px) and (max-width: 1919px){
-  .wrapper {
-    padding: 0px 12.5%;
-
-  }
   h4 {
     font-size: calc(20px + 8 * ((100vw - 576px)/(1200)));
+  }
+  .wrapper {
+    padding: 0px 12.5%;
   }
   main {
     display: flex;
@@ -209,11 +222,11 @@ footer {
 }
 
 @media (min-width: 1920px) {
-  .wrapper {
-    padding: 0px 12.5%;
-  }
   h4 {
     font-size: 28px;
+  }
+  .wrapper {
+    padding: 0px 12.5%;
   }
   main {
     display: flex;
@@ -225,10 +238,10 @@ footer {
     transform: translateY(-50%);
     margin-top: 0;
   }
-  .card {
-    flex-direction: row;
-  }
   .content {
     margin-left: 5em;
+  }
+  .card {
+    flex-direction: row;
   }
 }
