@@ -64,12 +64,22 @@ header {
   height: 100vh;
   transition: 0.5s background ease-in-out, 0.5s opacity ease-in-out ;
 }
+.landing {
+  height: 100vh;
+  padding-bottom: 5vh !important;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .intro {
-  height: 100%;
+  height: 100vh;
+  margin-top: 5vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   animation: type 4s;
+  overflow: hidden;
 }
 .intro h2:first-of-type { 
   animation-delay: .5s;
@@ -79,6 +89,7 @@ header {
 }
 .arrow {
   color: #AAABBC;
+  opacity: 0;
   font-size: 14px;
   font-weight: 400;
   animation: fadeIn 0.75s ease-in-out;

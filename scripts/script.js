@@ -1,7 +1,7 @@
 let header = document.querySelector("header");
 let nav = document.querySelector("nav");
 let mainNavLinks = document.querySelectorAll("nav ul li a");
-let arrow = document.querySelector("arrow");
+let arrow = document.querySelector(".arrow");
 let aside = document.querySelector("aside");
 let toTop = document.querySelector(".to-top");
 
@@ -12,6 +12,13 @@ toTop.style.visibility = "hidden";
 
 window.addEventListener("scroll", event => {
   let fromTop = window.scrollY;
+
+  if (fromTop > 0) {
+    arrow.style.opacity = 0;
+    arrow.style.animationFillMode = "none";
+  } else {
+    arrow.style.opacity = 0.8;
+  }
 
   if (fromTop >= window.innerHeight*0.9) {
     header.style.opacity = 0;
