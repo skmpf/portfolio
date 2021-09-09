@@ -20,7 +20,7 @@ window.addEventListener("scroll", event => {
     arrow.style.opacity = 0.8;
   }
 
-  if (fromTop >= window.innerHeight*0.9) {
+  if (fromTop >= window.innerHeight*0.8) {
     header.style.opacity = 0;
     nav.style.display = "flex";
     nav.style.visibility = "visible";
@@ -30,6 +30,7 @@ window.addEventListener("scroll", event => {
     header.style.opacity = 1;
     nav.style.display = "none";
     toTop.style.opacity = 0;
+    toTop.style.visibility = "hidden";
   }
 
   if (fromTop >= window.innerHeight/1.5) {
@@ -37,6 +38,7 @@ window.addEventListener("scroll", event => {
     aside.style.opacity = 1;
   } else {
     aside.style.opacity = 0;
+    aside.style.visibility = "hidden";
   }
 
   mainNavLinks.forEach(link => {

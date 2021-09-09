@@ -28,6 +28,7 @@ h2 {
   font-weight: 700;
 }
 h3 {
+  color: #046E8F;
   font-size: 22px;
   font-weight: 700;
   line-height: 1.6;
@@ -63,6 +64,7 @@ header {
   color: white;
   height: 100vh;
   transition: 0.5s background ease-in-out, 0.5s opacity ease-in-out ;
+  margin-bottom: 5vh;
 }
 .landing {
   height: 100vh;
