@@ -8,11 +8,18 @@
   <meta name="description" content="Sebastien Kempf is a Full-stack developer that I highly recommend!">
   <link rel="stylesheet" href="styles/reset.css" />
   <link rel="stylesheet" href="styles/styles.css" />
-  <script src="scripts/script.js"></script>
   <script src="https://kit.fontawesome.com/c2dd58e8c3.js" crossorigin="anonymous"></script>
 </head>
-<body>
-  <header id="top">
+<body id="top">
+  <nav class="wrapper">
+    <a href="#top" class="logo">SKempf</a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#work">Work</a></li>
+    </ul>
+  </nav>
+  <header class="wrapper">
       <div class="intro">
         <h1>Sebastien Kempf</h1>
         <h2>Full-stack developer from France</h2>
@@ -24,26 +31,14 @@
       </div>
       <span class="arrow">↓ scroll</span>
   </header>
-  <nav class="wrapper">
-    <a href="#top" class="logo">SKempf</a>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#work">Work</a></li>
-    </ul>
-  </nav>
   <main class="wrapper">
     <div class="content">
       <section id="about">
-        <h3>About me</h3>
-        <p>
-          Hi, I'm Sebastien Kempf, a Full-stack developer.
-          <br>
-          After over 6 years of managing supply chain, procurement and logistics international projects, I decided to take on a new challenge: learn different technical skills and create web applications.
-          <br>
-          I advocate for Agility and am a certified Scrum Master (PSM I) and Scrum Developer (PSD I).
-        </p>
-        <a href="https://sebkpf-cv.netlify.app/" target="_blank" rel="noopener" title="My resume">view my resume</a>
+        <h3>Hi, I'm Sebastien Kempf!</h3>
+        <p>After over 6 years of managing supply chain, procurement and logistics international projects, I decided to take on a new challenge: learn different technical skills and create web and mobile applications.</p>
+        <p>My education and work experiences have taught me the need for constant learning and adapting.</p>
+        <p>I still very much like the operational aspect of moving projects forward. To that end, I advocate for Agility and am a certified Scrum Master (PSM I) and Scrum Developer (PSD I).</p>
+        <a class="resume" href="https://sebkpf-cv.netlify.app/" target="_blank" rel="noopener" title="My resume">view my resume</a>
       </section>
       <section id="skills">
         <h3>Technologies I use</h3>
@@ -67,7 +62,6 @@
           <li><article><h5>PHPUnit, Codeception</h5></article></li>
           <li><article><h5>React</h5></article></li>
           <li><article><h5>React Native</h5></article></li>
-          <li><article><h5>Scrum</h5></article></li>
           <li><article><h5>Solr</h5></article></li>
           <li><article><h5>Vue.js</h5></article></li>
         </ul>
@@ -77,11 +71,7 @@
         <ul>
           <li>
             <article class="card">
-              <div>
-                <img src="images/voisin-home.png" alt="voisin-home">
-                <img src="images/voisin-training.png" alt="voisin-training">
-                <img src="images/voisin-profile.png" alt="voisin-profile">
-              </div>
+              <img src="images/voisin.png" alt="voisin">
               <div class="card-desc">
                 <h4>Voisin Sauveteurs<span class="badge">2021</span></h4>
                 <p>
@@ -104,7 +94,7 @@
                 <p>
                   Leboncoin is a french classifieds web app.
                   <br>
-                  This clone has all the major features of the original site
+                  This clone has all the major features of the original site.
                 </p>
                 <div class="card-cta">
                   <a class="card-btn" href="https://leboncoin-clone.netlify.app/" target="_blank" rel="noopener" title="Leboncoin clone">Visit site</a>
@@ -178,5 +168,6 @@
       <a href="/">Sebastien Kempf</a>
     </p>
   </footer>
+  <script src="scripts/script.js"></script>
 </body>
 </html>
