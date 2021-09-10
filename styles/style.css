@@ -49,8 +49,11 @@ a, a:visited {
   align-items: flex-start;
 }
 #about, #skills, #work {
-  padding-top: 4rem;
-  padding-bottom: 6rem;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+#about, #skills {
+  border-bottom: 1px solid #AAABBC;
 }
 
 /* HEADER */
@@ -362,6 +365,10 @@ footer a:hover {
   h4 {
     font-size: calc(20px + 8 * ((100vw - 576px)/(1200)));
   }
+  #about, #skills, #work {
+    padding-top: 4rem;
+    padding-bottom: 6rem;
+  }
   .card-demo img {
     max-width: 450px;
   }
@@ -403,6 +410,10 @@ footer a:hover {
   }
   .content {
     margin-left: 5em;
+  }
+  #about, #skills, #work {
+    padding-top: 4rem;
+    padding-bottom: 6rem;
   }
   .card-demo img {
     max-width: 450px;
@@ -449,6 +460,10 @@ footer a:hover {
   }
   .content {
     margin-left: 5em;
+  }
+  #about, #skills, #work {
+    padding-top: 4rem;
+    padding-bottom: 6rem;
   }
   #about p {
     line-height: 30px;
