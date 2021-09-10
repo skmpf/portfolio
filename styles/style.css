@@ -48,7 +48,7 @@ a, a:visited {
   padding: 0px 32px;
   align-items: flex-start;
 }
-#about, #skills, #work, aside {
+#about, #skills, #work {
   padding-top: 4rem;
   padding-bottom: 6rem;
 }
@@ -151,6 +151,11 @@ nav > ul > li {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition:
+    color .15s ease-in-out,
+    background-color .15s ease-in-out,
+    border-color .15s ease-in-out,
+    box-shadow .15s ease-in-out;
 }
 .resume:hover {
   background-color: #046E8F;
@@ -172,43 +177,46 @@ nav > ul > li {
   padding: 5px 10px;
   margin-right: 10px;
   margin-bottom: 15px;
-  /* text-transform: uppercase; */
 }
 
 /* WORK */
-#work > ul {
+#work ul, .card, .card-demo, .card-desc {
   display: flex;
   flex-direction: column;
 }
 #work li {
+  width: 100%;
   margin-top: 30px;
   padding-top: 30px;
   padding-bottom: 30px;
-  border-bottom: 2px solid #d6d6d6;
+  border-bottom: 1px solid #AAABBC;
 }
-.card {
-  display: flex;
-  flex-direction: column;
+.card-demo, .card-desc {
+  width: 100%;
+}
+.card-demo {
   align-items: center;
+}
+.card-demo img {
+  max-width: 350px;
+  height: auto;
 }
 .card-desc {
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
 }
 .card-desc p {
   max-width: 390px;
-}
-.card p {
+  align-self: center;
   color: #AAABBC;
   line-height: 1.6;
+  margin-top: 10px;
   margin-bottom: 30px;
-  text-align: center;
 }
 .badge {
   font-size: 12px !important;
   vertical-align: middle !important;
   margin-left: 10px;
-  color: #fff;
+  color: white;
   background-color: #046E8F;
   display: inline-block;
   padding: .25em .4em;
@@ -220,16 +228,14 @@ nav > ul > li {
   vertical-align: baseline;
   border-radius: .25rem;
 }
-.card-cta {
-  display: flex;
-  justify-content: space-around;
-}
 .card-btn {
   border: 1px solid transparent;
   border-radius: 30px;
   border-color: #046E8F;
   color: #046E8F;
   padding: 12px 30px;
+  margin-left: 15px;
+  margin-right: 15px;
   display: inline-block;
   font-weight: 400;
   text-align: center;
@@ -250,9 +256,6 @@ nav > ul > li {
 .card-btn:hover {
   color: white;
   background-color: #046E8F;
-}
-.card img {
-  max-width: 500px;
 }
 
 /* SIDEBAR */
@@ -359,6 +362,9 @@ footer a:hover {
   h4 {
     font-size: calc(20px + 8 * ((100vw - 576px)/(1200)));
   }
+  .card-demo img {
+    max-width: 450px;
+  }
 }
 
 @media (min-width: 992px) and (max-width: 1919px){
@@ -397,6 +403,9 @@ footer a:hover {
   }
   .content {
     margin-left: 5em;
+  }
+  .card-demo img {
+    max-width: 450px;
   }
   footer {
     text-align: left;
@@ -450,8 +459,19 @@ footer a:hover {
     font-size: 16px;
     width: 160px;
   }
+  #work li {
+    margin-top: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
   .card {
     flex-direction: row;
+  }
+  .card-demo img {
+    max-width: 450px;
+  }
+  .card-desc p {
+    max-width: unset;
   }
   footer {
     text-align: left;
