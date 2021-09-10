@@ -323,6 +323,7 @@ footer {
   color: #AAABBC;
   text-align: center;
   padding: 1.25rem;
+  line-height: 1.5;
 }
 footer a:hover {
   color: #046E8F;
