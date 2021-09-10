@@ -1,4 +1,6 @@
-# Welcome to my portfolio
+# ✨ Welcome to my portfolio ✨
+
+Demo link: [https://sebastien-kempf.netlify.app/](https://sebastien-kempf.netlify.app/)
 
 I have not used any framework or library to write it, it uses only HTML, CSS and vanilla JavaScript.
 
@@ -8,4 +10,5 @@ I did my best to make it accessible, responsive and function properly if a brows
 
 ## TO DO
 
-I would like to spend some time to replace the image assets by using higher quality screenshots and device mockups.
+- Spend some time to replace the image assets by using higher quality screenshots and device mockups.
+- Implement Matomo on my Raspberry Pi for the fun of it.
