@@ -34,6 +34,9 @@ h3 {
   line-height: 1.6;
   margin-bottom: 20px;
 }
+.content h3 {
+  margin-bottom: 35px;
+}
 h4 {
   font-size: 20px;
   font-weight: 700;
@@ -124,13 +127,14 @@ nav > a, nav > ul {
 nav > ul {
   display: flex;
   text-transform: uppercase;
+  font-size: calc(14px + 2 * ((100vw - 576px)/(1200)));
 }
 nav > ul > li {
-  margin-left: 40px;
+  margin-left: 10px;
 }
 .logo {
   font-weight: 700;
-  font-size: 22px;
+  font-size: calc(22px + 2 * ((100vw - 576px)/(1200)));
   transition: all 0.1s ease;
 }
 .logo:hover {
@@ -239,6 +243,7 @@ nav > ul > li {
   padding: 12px 30px;
   margin-left: 15px;
   margin-right: 15px;
+  margin-bottom: 15px;
   display: inline-block;
   font-weight: 400;
   text-align: center;
@@ -365,6 +370,9 @@ footer a:hover {
   h4 {
     font-size: calc(20px + 8 * ((100vw - 576px)/(1200)));
   }
+  nav > ul > li {
+    margin-left: 20px;
+  }
   #about, #skills, #work {
     padding-top: 4rem;
     padding-bottom: 6rem;
@@ -398,6 +406,9 @@ footer a:hover {
   .wrapper {
     padding: 0px 12.5%;
   }
+  nav > ul > li {
+    margin-left: 40px;
+  }
   main {
     display: flex;
     flex-direction: row-reverse;
@@ -412,8 +423,8 @@ footer a:hover {
     margin-left: 5em;
   }
   #about, #skills, #work {
-    padding-top: 4rem;
-    padding-bottom: 6rem;
+    padding-top: 3rem;
+    padding-bottom: 5rem;
   }
   .card-demo img {
     max-width: 450px;
@@ -448,6 +459,9 @@ footer a:hover {
   .wrapper {
     padding: 0px 12.5%;
   }
+  nav > ul > li {
+    margin-left: 40px;
+  }
   main {
     display: flex;
     flex-direction: row-reverse;
@@ -462,8 +476,8 @@ footer a:hover {
     margin-left: 5em;
   }
   #about, #skills, #work {
-    padding-top: 4rem;
-    padding-bottom: 6rem;
+    padding-top: 3rem;
+    padding-bottom: 5rem;
   }
   #about p {
     line-height: 30px;
