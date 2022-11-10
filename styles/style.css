@@ -99,6 +99,9 @@ header {
   animation-delay: 2s;
   animation-fill-mode: forwards;
 }
+#deezer-link:hover {
+  color: #ef5466;
+}
 #liip-link:hover {
   color: #6ea644;
 }
