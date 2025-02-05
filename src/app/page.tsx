@@ -1,19 +1,20 @@
 export default function Home() {
   return (
-    <div className="max-w-2xl mx-auto min-h-full p-8 flex flex-col gap-4 lg:gap-8 text-gray-900 bg-white">
-      <header>
-        <h1 className="font-medium pt-14 pb-6">Sebastien Kempf</h1>
+    <div className="mx-auto flex min-h-full max-w-2xl flex-col bg-white p-8 pt-0 text-gray-900 md:pt-8">
+      <header className="">
+        <h1 className="pt-12 pb-6 font-medium">Sebastien Kempf</h1>
         <p>
           I&#39;m a frontend developer and tech enthusiast. I love building
           accessible, performant, and scalable web and mobile applications.
         </p>
       </header>
       <main className="flex-1">
-        <h2>Experiences</h2>
-        <ul>
+        <h2 className="mt-8 mb-3 font-medium">Experiences</h2>
+        <ul className="mb-4 list-inside list-disc space-y-1 md:mb-8">
           <li>
             Frontend Engineer at{" "}
             <a
+              className="text-purple-500 hover:text-purple-700"
               href="https://www.deezer.com/"
               target="_blank"
               rel="noopener noreferrer"
@@ -25,6 +26,7 @@ export default function Home() {
           <li>
             Software Engineer at{" "}
             <a
+              className="text-purple-500 hover:text-purple-700"
               href="https://www.liip.ch/"
               target="_blank"
               rel="noopener noreferrer"
@@ -33,11 +35,13 @@ export default function Home() {
             </a>{" "}
             - 2020 - 2021
           </li>
+          <li>Freelance Web & Mobile Developer - 2020 - present</li>
         </ul>
-        <h2>Projects</h2>
-        <ul>
+        <h2 className="mt-8 mb-3 font-medium">Projects</h2>
+        <ul className="mb-4 list-inside list-disc space-y-1 md:mb-8">
           <li>
             <a
+              className="text-purple-500 hover:text-purple-700"
               href="https://vinomemo.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
@@ -46,14 +50,10 @@ export default function Home() {
             </a>{" "}
             - Write down your wine tasting notes quickly and easily
           </li>
-        </ul>
-        <ul>
           <li>
             VoisinSauveteurs - Request urgent medical help from neighbours
             mobile app
           </li>
-        </ul>
-        <ul>
           <li>KIP - Parking spot finder mobile app</li>
         </ul>
       </main>
@@ -73,14 +73,14 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="flex justify-center gap-2 lg:gap-4 text-neutral-400 tracking-tight">
+    <footer className="flex justify-center gap-2 tracking-tight text-neutral-400">
       {links.map((link) => (
         <a
           key={link.name}
           href={link.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:text-purple-500 transition-colors duration-200"
+          className="transition-colors duration-200 hover:text-purple-500"
         >
           {link.name}
         </a>
