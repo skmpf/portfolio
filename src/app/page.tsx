@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <div className="mx-auto flex min-h-full max-w-2xl flex-col bg-white p-8 pt-0 text-gray-900 md:pt-8">
+    <div className="mx-auto flex min-h-full max-w-2xl flex-col p-8 pt-0 md:pt-8">
       <header className="">
         <h1 className="pt-12 pb-6 font-medium">Sebastien Kempf</h1>
         <p>
