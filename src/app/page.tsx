@@ -68,7 +68,7 @@ const Footer = () => {
     { name: "GitHub", url: "https://github.com/skmpf" },
     {
       name: "Bluesky",
-      url: "https://bsky.app/profile/techpadawan.bsky.social",
+      url: "https://bsky.app/profile/sebastienkempf.bsky.social",
     },
   ];
 
