@@ -53,7 +53,7 @@ export default function Home() {
           <li>
             <a
               className="text-purple-500 hover:text-purple-700"
-              href="https://blog.sebastienkempf.xyz/"
+              href="https://blog.skempf.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
