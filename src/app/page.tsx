@@ -42,7 +42,7 @@ export default function Home() {
           <li>
             <a
               className="text-purple-500 hover:text-purple-700"
-              href="https://vinomemo.vercel.app/"
+              href="https://vinomemo.app/"
               target="_blank"
               rel="noopener noreferrer"
             >
