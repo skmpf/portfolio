@@ -51,6 +51,17 @@ export default function Home() {
             - Write down your wine tasting notes quickly and easily
           </li>
           <li>
+            <a
+              className="text-purple-500 hover:text-purple-700"
+              href="https://blog.sebastienkempf.xyz/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              TechPadawan
+            </a>{" "}
+            - My blog where I talk about tech, web development and more
+          </li>
+          <li>
             VoisinSauveteurs - Request urgent medical help from neighbours
             mobile app
           </li>
