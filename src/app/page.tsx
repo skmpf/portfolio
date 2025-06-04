@@ -1,3 +1,63 @@
+interface Experience {
+  title: string;
+  company: string;
+  companyUrl?: string;
+  period: string;
+}
+
+interface Project {
+  name: string;
+  url?: string;
+  description: string;
+}
+
+const experiencesData: Experience[] = [
+  {
+    title: "Freelance Web & Mobile Developer",
+    company: "",
+    period: "2020 - present",
+  },
+  {
+    title: "Frontend Engineer",
+    company: "Deezer",
+    companyUrl: "https://www.deezer.com/",
+    period: "2022 - present",
+  },
+  {
+    title: "Software Engineer",
+    company: "Liip",
+    companyUrl: "https://www.liip.ch/",
+    period: "2020 - 2021",
+  },
+];
+
+const projectsData: Project[] = [
+  {
+    name: "Deezer Partners",
+    url: "https://partners.deezer.com/",
+    description:
+      "Become a premium Deezer distributor to create new revenue streams, boost retention and increase customer engagement.",
+  },
+  {
+    name: "VinoMemo",
+    url: "https://vinomemo.app/",
+    description: "Write down your wine tasting notes quickly and easily",
+  },
+  {
+    name: "TechPadawan",
+    url: "https://blog.skempf.com/",
+    description: "My blog where I talk about tech, web development and more",
+  },
+  {
+    name: "VoisinSauveteurs",
+    description: "Request urgent medical help from neighbours mobile app",
+  },
+  {
+    name: "KIP",
+    description: "Parking spot finder mobile app",
+  },
+];
+
 export default function Home() {
   return (
     <div className="mx-auto flex min-h-full max-w-2xl flex-col p-8 pt-0 md:pt-8">
@@ -11,73 +71,45 @@ export default function Home() {
       <main className="flex-1">
         <h2 className="mt-8 mb-3 font-medium">Experiences</h2>
         <ul className="mb-4 list-inside list-disc space-y-1 md:mb-8">
-          <li>
-            Frontend Engineer at{" "}
-            <a
-              className="text-purple-500 hover:text-purple-700"
-              href="https://www.deezer.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Deezer
-            </a>{" "}
-            - 2022 - present
-          </li>
-          <li>
-            Software Engineer at{" "}
-            <a
-              className="text-purple-500 hover:text-purple-700"
-              href="https://www.liip.ch/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Liip
-            </a>{" "}
-            - 2020 - 2021
-          </li>
-          <li>Freelance Web & Mobile Developer - 2020 - present</li>
+          {experiencesData.map((exp) => (
+            <li key={exp.title + exp.company}>
+              {exp.title}
+              {exp.company && " at "}
+              {exp.companyUrl ? (
+                <a
+                  className="text-purple-500 hover:text-purple-700"
+                  href={exp.companyUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {exp.company}
+                </a>
+              ) : (
+                exp.company
+              )}
+              {exp.period && ` / ${exp.period}`}
+            </li>
+          ))}
         </ul>
         <h2 className="mt-8 mb-3 font-medium">Projects</h2>
         <ul className="mb-4 list-inside list-disc space-y-1 md:mb-8">
-          <li>
-            <a
-              className="text-purple-500 hover:text-purple-700"
-              href="https://partners.deezer.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Deezer Partners
-            </a>{" "}
-            - Become a premium Deezer distributor to create new revenue streams,
-            boost retention and increase customer engagement.
-          </li>
-          <li>
-            <a
-              className="text-purple-500 hover:text-purple-700"
-              href="https://vinomemo.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              VinoMemo
-            </a>{" "}
-            - Write down your wine tasting notes quickly and easily
-          </li>
-          <li>
-            <a
-              className="text-purple-500 hover:text-purple-700"
-              href="https://blog.skempf.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              TechPadawan
-            </a>{" "}
-            - My blog where I talk about tech, web development and more
-          </li>
-          <li>
-            VoisinSauveteurs - Request urgent medical help from neighbours
-            mobile app
-          </li>
-          <li>KIP - Parking spot finder mobile app</li>
+          {projectsData.map((project) => (
+            <li key={project.name}>
+              {project.url ? (
+                <a
+                  className="text-purple-500 hover:text-purple-700"
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {project.name}
+                </a>
+              ) : (
+                project.name
+              )}
+              {project.description && ` - ${project.description}`}
+            </li>
+          ))}
         </ul>
       </main>
       <Footer />
