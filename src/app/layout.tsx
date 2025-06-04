@@ -5,9 +5,33 @@ import "./globals.css";
 
 const inter = Inter({ variable: "--font-inter-sans", subsets: ["latin"] });
 
+const siteUrl = "https://skempf.com";
+const siteTitleDefault = "Sebastien Kempf";
+const siteDescriptionShared = "Frontend developer and tech enthusiast";
+
 export const metadata: Metadata = {
-  title: "Sebastien Kempf",
-  description: "Frontend developer and tech enthusiast",
+  metadataBase: new URL(siteUrl),
+  alternates: {
+    canonical: "/",
+  },
+  title: {
+    default: siteTitleDefault,
+    template: `%s | ${siteTitleDefault}`,
+  },
+  description: siteDescriptionShared,
+  openGraph: {
+    title: siteTitleDefault,
+    description: siteDescriptionShared,
+    url: siteUrl,
+    siteName: siteTitleDefault,
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary",
+    title: siteTitleDefault,
+    description: siteDescriptionShared,
+  },
 };
 
 export default function RootLayout({
