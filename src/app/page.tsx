@@ -42,6 +42,18 @@ export default function Home() {
           <li>
             <a
               className="text-purple-500 hover:text-purple-700"
+              href="https://partners.deezer.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Deezer Partners
+            </a>{" "}
+            - Become a premium Deezer distributor to create new revenue streams,
+            boost retention and increase customer engagement.
+          </li>
+          <li>
+            <a
+              className="text-purple-500 hover:text-purple-700"
               href="https://vinomemo.app/"
               target="_blank"
               rel="noopener noreferrer"
