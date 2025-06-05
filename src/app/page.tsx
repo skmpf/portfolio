@@ -1,3 +1,9 @@
+import {
+  siteUrl,
+  siteTitleDefault,
+  siteDescriptionShared,
+} from "./metadata-constants";
+
 interface Experience {
   title: string;
   company: string;
@@ -59,8 +65,29 @@ const projectsData: Project[] = [
 ];
 
 export default function Home() {
+  const personStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: siteTitleDefault,
+    url: siteUrl,
+    jobTitle: "Frontend Developer",
+    description: siteDescriptionShared,
+    sameAs: [
+      "https://www.linkedin.com/in/sebastienkempf/",
+      "https://github.com/skmpf",
+      "https://bsky.app/profile/skempf.com",
+      "https://blog.skempf.com",
+    ],
+  };
+
   return (
     <div className="mx-auto flex min-h-full max-w-2xl flex-col p-8 pt-0 md:pt-8">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(personStructuredData),
+        }}
+      />
       <header className="">
         <h1 className="pt-12 pb-6 font-medium">Sebastien Kempf</h1>
         <p>

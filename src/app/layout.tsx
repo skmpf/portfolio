@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
+import {
+  siteUrl,
+  siteTitleDefault,
+  siteDescriptionShared,
+} from "./metadata-constants";
 
 const inter = Inter({ variable: "--font-inter-sans", subsets: ["latin"] });
-
-const siteUrl = "https://skempf.com";
-const siteTitleDefault = "Sebastien Kempf";
-const siteDescriptionShared = "Frontend developer and tech enthusiast";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
