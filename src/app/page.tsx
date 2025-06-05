@@ -91,8 +91,10 @@ export default function Home() {
       <header className="">
         <h1 className="pt-12 pb-6 font-medium">Sebastien Kempf</h1>
         <p>
-          I&#39;m a frontend developer and tech enthusiast. I love building
-          accessible, performant, and scalable web and mobile applications.
+          I am Sebastien Kempf, a frontend developer and tech enthusiast
+          passionate about crafting accessible, performant, and scalable web and
+          mobile applications using modern technologies like React and Next.js.
+          Explore my work and professional journey.
         </p>
       </header>
       <main className="flex-1">
