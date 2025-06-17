@@ -42,7 +42,7 @@ const projectsData: Project[] = [
     name: "Deezer Partners",
     url: "https://partners.deezer.com/",
     description:
-      "Become a premium Deezer distributor to create new revenue streams, boost retention and increase customer engagement.",
+      "New platform for partnership opportunities, solutions, and resources.",
   },
   {
     name: "VinoMemo",
