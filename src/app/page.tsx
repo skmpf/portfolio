@@ -72,6 +72,20 @@ export default function Home() {
     url: siteUrl,
     jobTitle: "Frontend Developer",
     description: siteDescriptionShared,
+    alumniOf: [
+      {
+        "@type": "CollegeOrUniversity",
+        name: "Université de Technologie de Troyes",
+      },
+    ],
+    knowsAbout: [
+      "React.js",
+      "Next.js",
+      "TypeScript",
+      "JavaScript",
+      "HTML",
+      "CSS",
+    ],
     sameAs: [
       "https://www.linkedin.com/in/sebastienkempf/",
       "https://github.com/skmpf",
@@ -91,9 +105,9 @@ export default function Home() {
       <header className="">
         <h1 className="pt-12 pb-6 font-medium">Sebastien Kempf</h1>
         <p>
-          I'm a frontend developer and tech enthusiast passionate about crafting
-          accessible, performant, and scalable web and mobile applications using
-          modern technologies like React.js and Next.js.
+          I&apos;m a frontend developer and tech enthusiast passionate about
+          crafting accessible, performant, and scalable web and mobile
+          applications using modern technologies like React.js and Next.js.
         </p>
         <p>Explore my work and professional journey.</p>
       </header>

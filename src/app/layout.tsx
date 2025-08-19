@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
@@ -33,6 +33,23 @@ export const metadata: Metadata = {
     title: siteTitleDefault,
     description: siteDescriptionShared,
   },
+  keywords: [
+    "frontend developer",
+    "react developer",
+    "nextjs developer",
+    "sebastien kempf",
+    "portfolio",
+  ],
+};
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "white" },
+    { media: "(prefers-color-scheme: dark)", color: "black" },
+  ],
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
 };
 
 export default function RootLayout({
