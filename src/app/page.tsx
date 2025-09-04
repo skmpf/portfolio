@@ -47,7 +47,8 @@ const projectsData: Project[] = [
   {
     name: "VinoMemo",
     url: "https://vinomemo.app/",
-    description: "Write down your wine tasting notes quickly and easily",
+    description:
+      "Professional wine tasting notes app with structured WSET methodology, designed for wine professionals and enthusiasts",
   },
   {
     name: "TechPadawan",
