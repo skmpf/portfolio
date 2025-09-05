@@ -2,10 +2,12 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Sebastien Kempf - Frontend Developer Portfolio",
-  description: "Explore the portfolio of Sebastien Kempf, a senior frontend developer specializing in React.js, Next.js, and modern web technologies. View projects and professional experience.",
+  description:
+    "Explore the portfolio of Sebastien Kempf, a senior frontend developer specializing in React.js, Next.js, and modern web technologies. View projects and professional experience.",
   openGraph: {
     title: "Sebastien Kempf - Frontend Developer Portfolio",
-    description: "Explore the portfolio of Sebastien Kempf, a senior frontend developer specializing in React.js, Next.js, and modern web technologies.",
+    description:
+      "Explore the portfolio of Sebastien Kempf, a senior frontend developer specializing in React.js, Next.js, and modern web technologies.",
     type: "website",
   },
 };
@@ -74,7 +76,10 @@ const projectsData: Project[] = [
 export default function Home() {
   return (
     <div className="mx-auto flex min-h-full max-w-2xl flex-col p-8 pt-0 md:pt-8">
-      <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-white dark:bg-zinc-950 px-4 py-2 text-purple-600 dark:text-purple-400 underline rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600 dark:focus:ring-purple-400">
+      <a
+        href="#main-content"
+        className="sr-only rounded-md bg-white px-4 py-2 text-purple-600 underline focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:ring-2 focus:ring-purple-600 focus:outline-none dark:bg-zinc-950 dark:text-purple-400 dark:focus:ring-purple-400"
+      >
         Skip to main content
       </a>
       <header className="" role="banner">
@@ -88,54 +93,75 @@ export default function Home() {
       </header>
       <main id="main-content" className="flex-1" role="main">
         <section aria-labelledby="experiences-heading">
-          <h2 id="experiences-heading" className="mt-8 mb-3 text-xl font-medium">Experiences</h2>
-        <ul className="mb-4 list-inside list-disc space-y-1 md:mb-8">
-          {experiencesData.map((exp) => (
-            <li key={exp.title + exp.company}>
-              {exp.title}
-              {exp.company && " at "}
-              {exp.companyUrl ? (
-                <a
-                  className="text-purple-600 underline decoration-1 underline-offset-2 hover:text-purple-800 dark:text-purple-400 dark:hover:text-purple-300"
-                  href={exp.companyUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`${exp.company} (opens in new tab)`}
-                >
-                  {exp.company}
-                </a>
-              ) : (
-                exp.company
-              )}
-              {exp.period && ` / ${exp.period}`}
-            </li>
-          ))}
-        </ul>
+          <h2
+            id="experiences-heading"
+            className="mt-8 mb-3 text-xl font-medium"
+          >
+            Experiences
+          </h2>
+          <ul className="mb-4 list-inside list-disc space-y-1 md:mb-8">
+            {experiencesData.map((exp) => (
+              <li key={exp.title + exp.company}>
+                {exp.title}
+                {exp.company && " at "}
+                {exp.companyUrl ? (
+                  <a
+                    className="text-purple-600 underline decoration-1 underline-offset-2 hover:text-purple-800 dark:text-purple-400 dark:hover:text-purple-300"
+                    href={exp.companyUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${exp.company} (opens in new tab)`}
+                  >
+                    {exp.company}
+                  </a>
+                ) : (
+                  exp.company
+                )}
+                {exp.period && ` / ${exp.period}`}
+              </li>
+            ))}
+          </ul>
         </section>
         <section aria-labelledby="projects-heading">
-          <h2 id="projects-heading" className="mt-8 mb-3 text-xl font-medium">Projects</h2>
-        <ul className="mb-4 list-inside list-disc space-y-1 md:mb-8">
-          {projectsData.map((project) => (
-            <li key={project.name}>
-              {project.url ? (
-                <a
-                  className="text-purple-600 underline decoration-1 underline-offset-2 hover:text-purple-800 dark:text-purple-400 dark:hover:text-purple-300"
-                  href={project.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`${project.name} (opens in new tab)`}
-                >
-                  {project.name}
-                </a>
-              ) : (
-                project.name
-              )}
-              {project.description && ` - ${project.description}`}
-            </li>
-          ))}
-        </ul>
+          <h2 id="projects-heading" className="mt-8 mb-3 text-xl font-medium">
+            Projects
+          </h2>
+          <ul className="mb-4 list-inside list-disc space-y-1 md:mb-8">
+            {projectsData.map((project) => (
+              <li key={project.name}>
+                {project.url ? (
+                  <a
+                    className="text-purple-600 underline decoration-1 underline-offset-2 hover:text-purple-800 dark:text-purple-400 dark:hover:text-purple-300"
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${project.name} (opens in new tab)`}
+                  >
+                    {project.name}
+                  </a>
+                ) : (
+                  project.name
+                )}
+                {project.description && ` - ${project.description}`}
+              </li>
+            ))}
+          </ul>
         </section>
       </main>
+      <section className="mt-8 mb-4">
+        <p className="text-neutral-600 dark:text-neutral-400">
+          Available for freelance projects —{" "}
+          <a
+            href="https://cal.com/kempf/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-purple-600 underline decoration-1 underline-offset-2 hover:text-purple-800 dark:text-purple-400 dark:hover:text-purple-300"
+            aria-label="Schedule a 30-minute call (opens in new tab)"
+          >
+            let&apos;s talk
+          </a>
+        </p>
+      </section>
       <Footer />
     </div>
   );
