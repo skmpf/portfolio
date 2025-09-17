@@ -24,7 +24,7 @@ interface Link {
   url: string;
 }
 
-const experiencesData: Experience[] = [
+const experiences: Experience[] = [
   {
     title: "Freelance Web & Mobile Developer",
     company: "",
@@ -44,7 +44,7 @@ const experiencesData: Experience[] = [
   },
 ];
 
-const projectsData: Project[] = [
+const projects: Project[] = [
   {
     name: "Deezer Partners",
     url: "https://partners.deezer.com/",
@@ -72,19 +72,16 @@ const projectsData: Project[] = [
   },
 ];
 
-const links: Link[] = [
+const socialLinks: Link[] = [
   { name: "LinkedIn", url: "https://www.linkedin.com/in/sebastienkempf/" },
   { name: "GitHub", url: "https://github.com/skmpf" },
-  {
-    name: "Bluesky",
-    url: "https://bsky.app/profile/skempf.com",
-  },
+  { name: "Bluesky", url: "https://bsky.app/profile/skempf.com" },
 ];
 
 export default function Home() {
   return (
     <div className="mx-auto flex min-h-full max-w-2xl flex-col p-8 pt-0 md:pt-8">
-      <header className="" role="banner">
+      <header role="banner">
         <h1 className="pt-12 pb-6 text-2xl font-medium">Sebastien Kempf</h1>
         <p>
           I&apos;m a frontend developer and tech enthusiast passionate about
@@ -102,7 +99,7 @@ export default function Home() {
             Experiences
           </h2>
           <ul className="mb-4 list-inside list-disc space-y-1 md:mb-8">
-            {experiencesData.map((exp) => (
+            {experiences.map((exp) => (
               <li key={exp.title + exp.company}>
                 {exp.title}
                 {exp.company && " at "}
@@ -129,7 +126,7 @@ export default function Home() {
             Projects
           </h2>
           <ul className="mb-4 list-inside list-disc space-y-1 md:mb-8">
-            {projectsData.map((project) => (
+            {projects.map((project) => (
               <li key={project.name}>
                 {project.url ? (
                   <a
@@ -174,7 +171,7 @@ const Footer = () => {
     <footer className="py-8" role="contentinfo">
       <nav aria-label="Social media links">
         <ul className="flex justify-center gap-4 tracking-tight">
-          {links.map((link) => (
+          {socialLinks.map((link) => (
             <li key={link.name}>
               <a
                 href={link.url}
