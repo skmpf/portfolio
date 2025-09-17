@@ -3,7 +3,46 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Sebastien Kempf - Web Developer",
   description:
-    "Explore the portfolio of Sebastien Kempf, a senior frontend developer specializing in React.js, Next.js, and modern web technologies. View projects and professional experience.",
+    "Sebastien Kempf, a senior frontend developer specializing in React.js, Next.js, and modern web technologies. View projects and professional experience.",
+  keywords: [
+    "Sebastien Kempf",
+    "Frontend Developer",
+    "React.js",
+    "Next.js",
+    "TypeScript",
+    "Web Development",
+    "Mobile Development",
+    "Freelance Developer",
+  ],
+  authors: [{ name: "Sebastien Kempf" }],
+  creator: "Sebastien Kempf",
+  openGraph: {
+    title: "Sebastien Kempf - Frontend Engineer",
+    description:
+      "Senior frontend developer specializing in React.js, Next.js, and modern web technologies.",
+    url: "https://skempf.com",
+    siteName: "Sebastien Kempf Portfolio",
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary",
+    title: "Sebastien Kempf - Frontend Engineer",
+    description:
+      "Senior frontend developer specializing in React.js, Next.js, and modern web technologies.",
+    creator: "@skempf",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 interface Experience {
@@ -81,6 +120,12 @@ const socialLinks: Link[] = [
 export default function Home() {
   return (
     <div className="mx-auto flex min-h-full max-w-2xl flex-col p-8 pt-0 md:pt-8">
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:rounded focus:bg-purple-600 focus:px-4 focus:py-2 focus:text-white"
+      >
+        Skip to main content
+      </a>
       <header role="banner">
         <h1 className="pt-12 pb-6 text-2xl font-medium">Sebastien Kempf</h1>
         <p>
@@ -147,7 +192,15 @@ export default function Home() {
           </ul>
         </section>
       </main>
-      <section className="mt-8 mb-4">
+      <Footer />
+    </div>
+  );
+}
+
+const Footer = () => {
+  return (
+    <footer className="mt-8 py-8" role="contentinfo">
+      <div className="mb-4 text-center">
         <p className="text-neutral-600 dark:text-neutral-400">
           Available for freelance projects —{" "}
           <a
@@ -160,15 +213,7 @@ export default function Home() {
             let&apos;s talk
           </a>
         </p>
-      </section>
-      <Footer />
-    </div>
-  );
-}
-
-const Footer = () => {
-  return (
-    <footer className="py-8" role="contentinfo">
+      </div>
       <nav aria-label="Social media links">
         <ul className="flex justify-center gap-4 tracking-tight">
           {socialLinks.map((link) => (

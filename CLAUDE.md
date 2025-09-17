@@ -64,10 +64,10 @@ src/
 
 ### Making Changes
 
-- Data changes: Update the arrays in `src/app/page.tsx` (experiencesData, projectsData, links)
+- Data changes: Update the arrays in `src/app/page.tsx` (experiences, projects, socialLinks)
 - Styling: Modify Tailwind classes or add custom CSS to globals.css
 - Layout changes: Edit `src/app/layout.tsx` for global modifications
-- SEO: Update metadata in page.tsx export
+- SEO: Update metadata in page.tsx export and structured data in layout.tsx
 
 ### TypeScript Configuration
 
