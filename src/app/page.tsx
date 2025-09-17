@@ -1,15 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Sebastien Kempf - Frontend Developer Portfolio",
+  title: "Sebastien Kempf - Web Developer",
   description:
     "Explore the portfolio of Sebastien Kempf, a senior frontend developer specializing in React.js, Next.js, and modern web technologies. View projects and professional experience.",
-  openGraph: {
-    title: "Sebastien Kempf - Frontend Developer Portfolio",
-    description:
-      "Explore the portfolio of Sebastien Kempf, a senior frontend developer specializing in React.js, Next.js, and modern web technologies.",
-    type: "website",
-  },
 };
 
 interface Experience {
@@ -23,6 +17,11 @@ interface Project {
   name: string;
   url?: string;
   description: string;
+}
+
+interface Link {
+  name: string;
+  url: string;
 }
 
 const experiencesData: Experience[] = [
@@ -73,15 +72,18 @@ const projectsData: Project[] = [
   },
 ];
 
+const links: Link[] = [
+  { name: "LinkedIn", url: "https://www.linkedin.com/in/sebastienkempf/" },
+  { name: "GitHub", url: "https://github.com/skmpf" },
+  {
+    name: "Bluesky",
+    url: "https://bsky.app/profile/skempf.com",
+  },
+];
+
 export default function Home() {
   return (
     <div className="mx-auto flex min-h-full max-w-2xl flex-col p-8 pt-0 md:pt-8">
-      <a
-        href="#main-content"
-        className="sr-only rounded-md bg-white px-4 py-2 text-purple-600 underline focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:ring-2 focus:ring-purple-600 focus:outline-none dark:bg-zinc-950 dark:text-purple-400 dark:focus:ring-purple-400"
-      >
-        Skip to main content
-      </a>
       <header className="" role="banner">
         <h1 className="pt-12 pb-6 text-2xl font-medium">Sebastien Kempf</h1>
         <p>
@@ -168,15 +170,6 @@ export default function Home() {
 }
 
 const Footer = () => {
-  const links = [
-    { name: "LinkedIn", url: "https://www.linkedin.com/in/sebastienkempf/" },
-    { name: "GitHub", url: "https://github.com/skmpf" },
-    {
-      name: "Bluesky",
-      url: "https://bsky.app/profile/skempf.com",
-    },
-  ];
-
   return (
     <footer className="py-8" role="contentinfo">
       <nav aria-label="Social media links">
