@@ -37,6 +37,14 @@ export default function RootLayout({
           content="#09090b"
           media="(prefers-color-scheme: dark)"
         />
+        <meta
+          property="twitter:image"
+          content="https://skempf.com/android-chrome-512x512.png"
+        />
+        <meta property="og:image" content="https://skempf.com/android-chrome-512x512.png" />
+        <meta property="og:image:width" content="512" />
+        <meta property="og:image:height" content="512" />
+        <meta property="og:image:type" content="image/png" />
       </head>
       <body className="bg-white text-gray-900 antialiased dark:bg-zinc-950 dark:text-zinc-200">
         <script
