@@ -40,3 +40,25 @@ body {
   clip: auto;
   white-space: normal;
 }
+
+.link {
+  color: rgb(3 105 161);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  transition: color 0.2s ease-in-out;
+}
+
+.link:hover {
+  color: rgb(12 74 110);
+}
+
+@media (prefers-color-scheme: dark) {
+  .link {
+    color: rgb(56 189 248);
+  }
+  
+  .link:hover {
+    color: rgb(125 211 252);
+  }
+}

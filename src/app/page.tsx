@@ -150,7 +150,7 @@ export default function Home() {
                 {exp.company && " at "}
                 {exp.companyUrl ? (
                   <a
-                    className="text-purple-600 underline decoration-1 underline-offset-2 hover:text-purple-800 dark:text-purple-400 dark:hover:text-purple-300"
+                    className="link"
                     href={exp.companyUrl}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -175,7 +175,7 @@ export default function Home() {
               <li key={project.name}>
                 {project.url ? (
                   <a
-                    className="text-purple-600 underline decoration-1 underline-offset-2 hover:text-purple-800 dark:text-purple-400 dark:hover:text-purple-300"
+                    className="link"
                     href={project.url}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -207,7 +207,7 @@ const Footer = () => {
             href="https://cal.com/kempf/30min"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-purple-600 underline decoration-1 underline-offset-2 hover:text-purple-800 dark:text-purple-400 dark:hover:text-purple-300"
+            className="link"
             aria-label="Schedule a 30-minute call (opens in new tab)"
           >
             let&apos;s talk
@@ -222,7 +222,7 @@ const Footer = () => {
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-neutral-600 underline decoration-1 underline-offset-2 transition-colors duration-200 hover:text-purple-600 dark:text-neutral-400 dark:hover:text-purple-400"
+                className="link text-neutral-600 dark:text-neutral-400"
                 aria-label={`Visit my ${link.name} profile (opens in new tab)`}
               >
                 {link.name}

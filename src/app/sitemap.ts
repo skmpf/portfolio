@@ -1,10 +1,13 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const baseUrl = "https://www.skempf.com";
+  const currentDate = new Date();
+
   return [
     {
-      url: "https://skempf.com",
-      lastModified: new Date(),
+      url: baseUrl,
+      lastModified: currentDate,
       changeFrequency: "monthly",
       priority: 1,
     },
