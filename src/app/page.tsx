@@ -3,10 +3,10 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Sebastien Kempf - Web Developer",
   description:
-    "Sebastien Kempf, a senior frontend developer specializing in React.js, Next.js, and modern web technologies. View projects and professional experience.",
+    "Sebastien Kempf, a senior web developer specializing in React.js, Next.js, and modern web technologies. View projects and professional experience.",
   keywords: [
     "Sebastien Kempf",
-    "Frontend Developer",
+    "Web Developer",
     "React.js",
     "Next.js",
     "TypeScript",
@@ -17,9 +17,9 @@ export const metadata: Metadata = {
   authors: [{ name: "Sebastien Kempf" }],
   creator: "Sebastien Kempf",
   openGraph: {
-    title: "Sebastien Kempf - Frontend Engineer",
+    title: "Sebastien Kempf - Software Engineer",
     description:
-      "Senior frontend developer specializing in React.js, Next.js, and modern web technologies.",
+      "Senior web developer specializing in React.js, Next.js, and modern web technologies.",
     url: "https://skempf.com",
     siteName: "Sebastien Kempf Portfolio",
     type: "website",
@@ -27,9 +27,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary",
-    title: "Sebastien Kempf - Frontend Engineer",
+    title: "Sebastien Kempf - Software Engineer",
     description:
-      "Senior frontend developer specializing in React.js, Next.js, and modern web technologies.",
+      "Senior web developer specializing in React.js, Next.js, and modern web technologies.",
     creator: "@skempf",
   },
   robots: {
@@ -85,16 +85,16 @@ const experiences: Experience[] = [
 
 const projects: Project[] = [
   {
+    name: "VinoMemo",
+    url: "https://apps.apple.com/us/app/vinomemo/id6754691185",
+    description:
+      "Wine tasting notes app with WSET methodology for learning wine analysis, from beginners to sommeliers",
+  },
+  {
     name: "Deezer Partners",
     url: "https://partners.deezer.com/",
     description:
       "New platform for partnership opportunities, solutions, and resources.",
-  },
-  {
-    name: "VinoMemo",
-    url: "https://vinomemo.app/",
-    description:
-      "Professional wine tasting notes app with structured WSET methodology, designed for wine professionals and enthusiasts",
   },
   {
     name: "TechPadawan",
@@ -129,9 +129,9 @@ export default function Home() {
       <header role="banner">
         <h1 className="pt-12 pb-6 text-2xl font-medium">Sebastien Kempf</h1>
         <p>
-          I&apos;m a frontend developer and tech enthusiast passionate about
-          crafting accessible, performant, and scalable web and mobile
-          applications using modern technologies like React.js and Next.js.
+          I&apos;m a web developer and tech enthusiast passionate about crafting
+          accessible, performant, and scalable web and mobile applications using
+          modern technologies like React.js and Next.js.
         </p>
         <p>Explore my work and professional journey.</p>
       </header>

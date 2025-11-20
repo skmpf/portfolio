@@ -41,7 +41,10 @@ export default function RootLayout({
           property="twitter:image"
           content="https://skempf.com/android-chrome-512x512.png"
         />
-        <meta property="og:image" content="https://skempf.com/android-chrome-512x512.png" />
+        <meta
+          property="og:image"
+          content="https://skempf.com/android-chrome-512x512.png"
+        />
         <meta property="og:image:width" content="512" />
         <meta property="og:image:height" content="512" />
         <meta property="og:image:type" content="image/png" />
@@ -54,9 +57,9 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Person",
               name: "Sebastien Kempf",
-              jobTitle: "Frontend Engineer",
+              jobTitle: "Software Engineer",
               description:
-                "Senior frontend developer specializing in React.js, Next.js, and modern web technologies",
+                "Senior web developer specializing in React.js, Next.js, and modern web technologies",
               url: "https://skempf.com",
               sameAs: [
                 "https://www.linkedin.com/in/sebastienkempf/",
@@ -80,7 +83,7 @@ export default function RootLayout({
                 itemOffered: {
                   "@type": "Service",
                   name: "Web Development Services",
-                  description: "Frontend development and consulting services",
+                  description: "Web development and consulting services",
                 },
               },
             }),
