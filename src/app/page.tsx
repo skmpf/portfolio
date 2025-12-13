@@ -55,6 +55,7 @@ interface Experience {
 interface Project {
   name: string;
   url?: string;
+  links?: { name: string; url: string }[];
   description: string;
 }
 
@@ -86,9 +87,12 @@ const experiences: Experience[] = [
 const projects: Project[] = [
   {
     name: "VinoMemo",
-    url: "https://apps.apple.com/us/app/vinomemo/id6754691185",
+    links: [
+      { name: "iOS App", url: "https://apps.apple.com/us/app/vinomemo/id6754691185" },
+      { name: "Web App", url: "https://vinomemo.app" },
+    ],
     description:
-      "Wine tasting notes app with WSET methodology for learning wine analysis, from beginners to sommeliers",
+      "Professional wine tasting notes app using WSET methodology - free for WSET Level 2, with offline support and cross-platform sync",
   },
   {
     name: "Deezer Partners",
@@ -173,7 +177,26 @@ export default function Home() {
           <ul className="mb-4 list-inside list-disc space-y-1 md:mb-8">
             {projects.map((project) => (
               <li key={project.name}>
-                {project.url ? (
+                {project.links ? (
+                  <>
+                    {project.name} (
+                    {project.links.map((link, index) => (
+                      <span key={link.name}>
+                        <a
+                          className="link"
+                          href={link.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={`${project.name} ${link.name} (opens in new tab)`}
+                        >
+                          {link.name}
+                        </a>
+                        {index < project.links!.length - 1 && ", "}
+                      </span>
+                    ))}
+                    )
+                  </>
+                ) : project.url ? (
                   <a
                     className="link"
                     href={project.url}
