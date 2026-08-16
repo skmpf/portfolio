@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
+import { SITE_URL } from "./site";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
+  alternates: { canonical: "/" },
   title: "Sebastien Kempf - Web Developer",
   description:
     "Sebastien Kempf, a senior web developer specializing in React.js, Next.js, and modern web technologies. View projects and professional experience.",
@@ -20,10 +23,18 @@ export const metadata: Metadata = {
     title: "Sebastien Kempf - Software Engineer",
     description:
       "Senior web developer specializing in React.js, Next.js, and modern web technologies.",
-    url: "https://skempf.com",
+    url: SITE_URL,
     siteName: "Sebastien Kempf Portfolio",
     type: "website",
     locale: "en_US",
+    images: [
+      {
+        url: "/android-chrome-512x512.png",
+        width: 512,
+        height: 512,
+        type: "image/png",
+      },
+    ],
   },
   twitter: {
     card: "summary",
@@ -31,6 +42,7 @@ export const metadata: Metadata = {
     description:
       "Senior web developer specializing in React.js, Next.js, and modern web technologies.",
     creator: "@skempf",
+    images: ["/android-chrome-512x512.png"],
   },
   robots: {
     index: true,

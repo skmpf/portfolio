@@ -1,4 +1,5 @@
 import { Analytics } from "@vercel/analytics/react";
+import { SITE_URL } from "./site";
 import "./globals.css";
 
 export default function RootLayout({
@@ -37,17 +38,6 @@ export default function RootLayout({
           content="#09090b"
           media="(prefers-color-scheme: dark)"
         />
-        <meta
-          property="twitter:image"
-          content="https://skempf.com/android-chrome-512x512.png"
-        />
-        <meta
-          property="og:image"
-          content="https://skempf.com/android-chrome-512x512.png"
-        />
-        <meta property="og:image:width" content="512" />
-        <meta property="og:image:height" content="512" />
-        <meta property="og:image:type" content="image/png" />
       </head>
       <body className="bg-white text-gray-900 antialiased dark:bg-zinc-950 dark:text-zinc-200">
         <script
@@ -60,7 +50,8 @@ export default function RootLayout({
               jobTitle: "Software Engineer",
               description:
                 "Senior web developer specializing in React.js, Next.js, and modern web technologies",
-              url: "https://skempf.com",
+              url: SITE_URL,
+              image: `${SITE_URL}/android-chrome-512x512.png`,
               sameAs: [
                 "https://www.linkedin.com/in/sebastienkempf/",
                 "https://github.com/skmpf",
@@ -76,7 +67,12 @@ export default function RootLayout({
                 "Mobile Development",
                 "Frontend Development",
               ],
-              alumniOf: "Deezer",
+              alumniOf: "Liip",
+              worksFor: {
+                "@type": "Organization",
+                name: "Deezer",
+                url: "https://www.deezer.com/",
+              },
               workLocation: "Remote",
               offers: {
                 "@type": "Offer",
