@@ -87,31 +87,15 @@ const experiences: Experience[] = [
 const projects: Project[] = [
   {
     name: "VinoMemo",
-    links: [
-      { name: "iOS App", url: "https://apps.apple.com/us/app/vinomemo/id6754691185" },
-      { name: "Web App", url: "https://vinomemo.app" },
-    ],
+    url: "https://vinomemo.app",
     description:
-      "Professional wine tasting notes app using WSET methodology - free for WSET Level 2, with offline support and cross-platform sync",
+      "Private wine journal with guided tasting notes for appearance, nose, palate, and quality - free Standard notes, offline support, no ads, no subscription",
   },
   {
-    name: "Deezer Partners",
-    url: "https://partners.deezer.com/",
+    name: "Deezer for Businesses",
+    url: "https://business.deezer.com/",
     description:
       "New platform for partnership opportunities, solutions, and resources.",
-  },
-  {
-    name: "TechPadawan",
-    url: "https://blog.skempf.com/",
-    description: "My blog where I talk about tech, web development and more",
-  },
-  {
-    name: "VoisinSauveteurs",
-    description: "Request urgent medical help from neighbours mobile app",
-  },
-  {
-    name: "KIP",
-    description: "Parking spot finder mobile app",
   },
 ];
 
