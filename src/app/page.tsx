@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
-import { SITE_URL } from "./site";
+import { SITE_DESCRIPTION, SITE_TITLE, SITE_URL } from "./site";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(SITE_URL),
   alternates: { canonical: "/" },
-  title: "Sebastien Kempf - Web Developer",
-  description:
-    "Sebastien Kempf, a senior web developer specializing in React.js, Next.js, and modern web technologies. View projects and professional experience.",
+  title: SITE_TITLE,
+  description: SITE_DESCRIPTION,
   keywords: [
     "Sebastien Kempf",
     "Web Developer",
@@ -20,9 +18,8 @@ export const metadata: Metadata = {
   authors: [{ name: "Sebastien Kempf" }],
   creator: "Sebastien Kempf",
   openGraph: {
-    title: "Sebastien Kempf - Software Engineer",
-    description:
-      "Senior web developer specializing in React.js, Next.js, and modern web technologies.",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
     url: SITE_URL,
     siteName: "Sebastien Kempf Portfolio",
     type: "website",
@@ -38,9 +35,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary",
-    title: "Sebastien Kempf - Software Engineer",
-    description:
-      "Senior web developer specializing in React.js, Next.js, and modern web technologies.",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
     creator: "@skempf",
     images: ["/android-chrome-512x512.png"],
   },
@@ -101,7 +97,7 @@ const projects: Project[] = [
     name: "VinoMemo",
     url: "https://vinomemo.app",
     description:
-      "Private wine journal with guided tasting notes for appearance, nose, palate, and quality - free Standard notes, offline support, no ads, no subscription",
+      "Private wine journal with guided tasting notes, bottle photos, and offline search. Free Standard tasting; optional subscription for Advanced and Pro, plus Backup and Sync. No account needed to start.",
   },
   {
     name: "Deezer for Businesses",

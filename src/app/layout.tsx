@@ -1,6 +1,27 @@
+import type { Metadata, Viewport } from "next";
 import { Analytics } from "@vercel/analytics/react";
-import { SITE_URL } from "./site";
+import { SITE_DESCRIPTION, SITE_URL } from "./site";
 import "./globals.css";
+
+export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "32x32" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: { url: "/apple-touch-icon.png", sizes: "180x180" },
+  },
+  manifest: "/site.webmanifest",
+};
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#09090b" },
+  ],
+};
 
 export default function RootLayout({
   children,
@@ -9,36 +30,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="preconnect" href="https://cal.com" />
-        <link rel="preconnect" href="https://vitals.vercel-insights.com" />
-        <link rel="icon" href="/favicon.ico" sizes="32x32" />
-        <link
-          rel="icon"
-          href="/favicon-16x16.png"
-          sizes="16x16"
-          type="image/png"
-        />
-        <link
-          rel="icon"
-          href="/favicon-32x32.png"
-          sizes="32x32"
-          type="image/png"
-        />
-        <link
-          rel="apple-touch-icon"
-          href="/apple-touch-icon.png"
-          sizes="180x180"
-        />
-        <link rel="manifest" href="/site.webmanifest" />
-        <meta name="theme-color" content="#ffffff" />
-        <meta
-          name="theme-color"
-          content="#09090b"
-          media="(prefers-color-scheme: dark)"
-        />
-      </head>
       <body className="bg-white text-gray-900 antialiased dark:bg-zinc-950 dark:text-zinc-200">
         <script
           type="application/ld+json"
@@ -48,8 +39,7 @@ export default function RootLayout({
               "@type": "Person",
               name: "Sebastien Kempf",
               jobTitle: "Software Engineer",
-              description:
-                "Senior web developer specializing in React.js, Next.js, and modern web technologies",
+              description: SITE_DESCRIPTION,
               url: SITE_URL,
               image: `${SITE_URL}/android-chrome-512x512.png`,
               sameAs: [
@@ -67,14 +57,12 @@ export default function RootLayout({
                 "Mobile Development",
                 "Frontend Development",
               ],
-              alumniOf: "Liip",
               worksFor: {
                 "@type": "Organization",
                 name: "Deezer",
                 url: "https://www.deezer.com/",
               },
-              workLocation: "Remote",
-              offers: {
+              makesOffer: {
                 "@type": "Offer",
                 itemOffered: {
                   "@type": "Service",
